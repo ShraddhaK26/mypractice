@@ -1,0 +1,63 @@
+<div class="demo">
+    <h1 class="title"> Sign Up Form </h1>
+    <div class="container">
+        <form [formGroup]="psignupForm">
+            <label> User Name : </label><br>
+            <input type="text" formControlName="userName"><br>
+            <span class="err" *ngIf="psignupForm.get('userName')?.errors?.['maxlength']">
+                Maximum 10 character's allowed</span>
+            <span class="err" *ngIf="psignupForm.get('userName')?.errors?.['minlength']">
+                Minimum 5 characters are required </span>
+            <span class="err" *ngIf=" !psignupForm.get('userName')?.errors?.['maxlength'] 
+             && !psignupForm.get('userName')?.errors?.['minlength']
+             && psignupForm.get('userName')?.errors?.['pattern']">
+                Enter only Alphabets
+            </span>
+            <br>
+            <label>Mobile No :</label><br>
+            <input type="text" class="mobnum" value="+91">
+            <input type="text" formControlName="mobNo" maxlength="10"><br>
+            <span class="err" *ngIf="psignupForm.get('mobNo')?.errors?.['pattern']">Enter numbers</span>
+    
+            <br>
+            <label> Email :</label><br>
+            <input type="text" formControlName="email"><br>
+            <span class="err" *ngIf="psignupForm.get('email')?.errors?.['pattern']">Enter valid mail</span>
+            <br>
+    
+            <label for="">Birth Date :</label><br>
+            <input type="text" placeholder="dd/mm/yyyy" formControlName="dob" (blur)="calYear()">
+            <br><br>
+            <span>Your age : {{userAge}}</span><br>
+            <span class="err" *ngIf="psignupForm.get('dob')?.errors?.['pattern']"> Please enter proper
+                formate</span>
+            <!-- <span  *ngIf="age > 18 && age < 60">age should above 18 and below 60</span> -->
+            <br>
+            <!-- <input type="date" (blur)="calYear()"> -->
+    
+            <input type="checkbox" formControlName="CT"> Please accept terms and conditions <br>
+            <span class="err" *ngIf="psignupForm.get('CT')?.invalid &&
+             (psignupForm.get('CT')?.touched || psignupForm.get('CT')?.dirty)">
+                Please accept conditions
+            </span><br>
+    
+            <label>Gender :</label>
+            <input type="radio" formControlName="gender" value="Male"  (change)="gender()"> Male
+            <input type="radio" formControlName="gender" value="Female" (change)="gender()"> Female <br>
+            <div class="err" *ngIf="!isGenderSelected ">Please select gender</div>
+            <br>
+            <label >Passord :</label>
+            <input [type]="showpass ? 'text': 'password'">
+            <span class="view" *ngIf="showpass" (click)="seepass()">
+            <i class="bi bi-eye"></i>
+        </span>
+        <span class="view" *ngIf="!showpass ">
+            <i class="bi bi-eye-slash" (click)="seepass()"></i>
+        </span>
+            <br><br>
+            <button (click)="submit()" class="btn" [disabled]="!psignupForm.valid"> Submit</button>
+        </form>
+    </div>
+    
+
+

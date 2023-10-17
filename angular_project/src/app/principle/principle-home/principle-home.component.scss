@@ -1,0 +1,75 @@
+label
+{
+    font: bold;
+    font-size: 15px;
+    font-family: arial black;
+    
+}
+input[type=text]:hover
+        {
+        border: 2px solid darkgrey;
+        
+       }
+
+       input[type=submit]:hover
+        {
+        border: 2px solid darkgreen;
+        
+       }
+ 
+    input[type=password]:hover
+        {
+        border: 2px solid darkgrey;
+        
+       }
+
+   input[type=date]:hover
+        {
+        border: 2px solid darkgrey;
+        
+       }
+
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 35px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: #111;
+}
+
+.active {
+background-color: #4CAF50;
+}
+
+li a:hover
+{
+color: white;
+
+}
+
+.demo{
+    width: 100%;
+    height: 580px;
+    background-image: url("../../../assets/image/img0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    margin:center;
+}
