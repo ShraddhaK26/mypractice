@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PrincipleRoutingModule } from './principle-routing.module';
 import { PrincipleHomeComponent } from './principle-home/principle-home.component';
-import { psignupFormComponent} from './principle-signup/principle-signup.component';
+import { PrincipleSignupFormComponent} from './principle-signup/principle-signup.component';
 import { PrincipleLogginComponent } from './principle-loggin/principle-loggin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -11,13 +11,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     PrincipleHomeComponent,
-    psignupFormComponent,
+    PrincipleSignupFormComponent,
     PrincipleLogginComponent
   ],
   imports: [
     CommonModule,
     PrincipleRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
 
   ]
 })
