@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CollectionService } from 'src/app/services/collection.service';
+
 
 @Component({
   selector: 'app-principle-loggin',
@@ -8,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class PrincipleLogginComponent {
 
-constructor(private router:Router){}
+constructor(private router:Router, private collectionService:CollectionService){}
 
 
 
 
-
+username:any;
   showLoginForm = true;
   newPassword: any;
   confirmPassword: any;
@@ -37,6 +39,7 @@ constructor(private router:Router){}
  
   submit(form: any) {
     console.log(form);
+    this.collectionService.userNameee=form.username;
     this.router.navigateByUrl('PrincipleMod/loginsucess');
 
   }

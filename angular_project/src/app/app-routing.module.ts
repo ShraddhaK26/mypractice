@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { TestComponent } from './test/test.component';
 import { PrincipleHomeComponent } from './principle/principle-home/principle-home.component';
-import { SuccefullLoginComponent } from './succefull-login/succefull-login.component';
+
 
 
 const routes: Routes = [

@@ -1,0 +1,17 @@
+
+
+
+<p>parent works!</p>
+<input type="text" [(ngModel)]="city">
+{{dataFromChildComponent}}
+<br>
+--------------------------------------------------------
+
+
+
+<app-child
+ [CityFromParentComponant]="city"
+ (childEvent)="dataFromChild($event)"
+
+></app-child> 
+

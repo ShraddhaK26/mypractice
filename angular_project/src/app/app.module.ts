@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { TestComponent } from './test/test.component';
-import { SuccefullLoginComponent } from './succefull-login/succefull-login.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { SuccefullLoginComponent } from './succefull-login/succefull-login.compo
     HomeComponent,
     LandingComponent,
     TestComponent,
-    SuccefullLoginComponent
+  
   ],
   imports: [
     BrowserModule,

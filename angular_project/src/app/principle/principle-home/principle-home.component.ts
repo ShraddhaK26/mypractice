@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { CollectionService } from 'src/app/services/collection.service';
 
 @Component({
   selector: 'app-principle-home',
@@ -7,7 +8,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./principle-home.component.scss']
 })
 export class PrincipleHomeComponent {
-  constructor(public route:Router){}
+  inputValue :any;
+  constructor(public route:Router , 
+   private collectionService:CollectionService){}
+
+  
 
   signUp(){
    // debugger
