@@ -30,6 +30,9 @@ export class LandingComponent {
       this.router.navigateByUrl('PrincipleMod/principleHome')
   
     }
+    subjectModLoad(){
+      this.router.navigateByUrl('subjectModule/SubLanding')
+    }
 
     
    

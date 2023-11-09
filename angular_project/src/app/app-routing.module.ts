@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { LandingComponent } from './landing/landing.component';
 import { TestComponent } from './test/test.component';
 import { PrincipleHomeComponent } from './principle/principle-home/principle-home.component';
+import { SubjectModule } from './subject/subject.module';
 
 
 
@@ -15,9 +16,9 @@ const routes: Routes = [
  
 
   {path: 'Adminmodule', loadChildren:()=>import('./admin/admin.module').then(mod=>mod.AdminModule)},
-  { path: 'PrincipleMod', loadChildren:()=>import ('./principle/principle.module').then(mod=>mod.PrincipleModule)}
-  
-  
+  { path: 'PrincipleMod', loadChildren:()=>import ('./principle/principle.module').then(mod=>mod.PrincipleModule)},
+  { path : "subjectModule", loadChildren:()=>import('./subject/subject.module').then(mod=>mod.SubjectModule) }
+
  
 
   
