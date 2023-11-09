@@ -4,14 +4,21 @@
 <p>parent works!</p>
 <input type="text" [(ngModel)]="city">
 {{dataFromChildComponent}}
-<br>
---------------------------------------------------------
+
+
+
+
+
+
+<br><br><br><br><br><br>
+********************************************************************************************************************************************
 
 
 
 <app-child
  [CityFromParentComponant]="city"
- (childEvent)="dataFromChild($event)"
+ (childDataEvent)="dataFromChild($event)"
+ [CarsDataFromParent]="cars"
 
 ></app-child> 
 

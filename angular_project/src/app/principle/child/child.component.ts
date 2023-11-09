@@ -8,13 +8,15 @@ import { Component,EventEmitter,Input, Output} from '@angular/core';
 export class ChildComponent {
  
 @Input() CityFromParentComponant:any;
-name:any;
-@Output() childEvent = new EventEmitter <any>();
+@Output() childDataEvent = new EventEmitter<any>();
+data:any;
+@Input() CarsDataFromParent:any;
+
 
 
 submit(){
-  this.childEvent.emit(this.name)
-
+  this.childDataEvent.emit(this.data);
+ 
 }
 }
 

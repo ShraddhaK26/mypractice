@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 city:any;
 dataFromChildComponent:any;
+cars = ['audi','TaTa','Suzuki','swift'];
 
-dataFromChild(data:any){
-  console.log(data);
-  this.dataFromChildComponent = data;
-}
+  dataFromChild(data:any){
+       console.log(data);
+       this.dataFromChildComponent = data;
+   }
+
 }
