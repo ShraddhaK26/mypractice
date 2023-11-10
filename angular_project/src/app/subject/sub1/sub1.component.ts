@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./sub1.component.scss']
 })
 export class Sub1Component {
-
+dataInViewChildType:any;
 }
